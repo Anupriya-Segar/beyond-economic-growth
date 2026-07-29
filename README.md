@@ -60,8 +60,7 @@ beyond-economic-growth/
 ├── pages/
 │
 ├── data/
-│   └── raw/
-|   └── processed/
+│   └── processed/
 │
 ├── notebooks/
 │   ├── 01_Data_Preparation.ipynb
