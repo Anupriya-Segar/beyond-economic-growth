@@ -1,8 +1,22 @@
-# Beyond Economic Growth
-
+# 🌍 Beyond Economic Growth
 ### Climate Resilience, Agriculture, and Trade as Drivers of Food Security
 
-**Data Visualization**  
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.40-FF4B4B?logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-5.24-3F4F75?logo=plotly&logoColor=white)
+
+**Data Visualization — M.Sc. Data Science Final Project**
+
+**[🔗 Live Dashboard](https://beyond-economic-growth.streamlit.app/)** &nbsp;|&nbsp; **[📊 Presentation](presentation/Beyond_Economic_Growth.pdf)** &nbsp;|&nbsp; **[📓 Notebooks](notebooks/)**
+
+---
+
+## At a Glance
+
+| | | |
+|:---:|:---:|:---:|
+| **177** | **2010–2023** | **7** |
+| Countries | Years Covered | Dashboard Pages |
 
 ---
 
@@ -14,18 +28,35 @@ Using integrated datasets from **FAOSTAT** and the **World Bank**, the analysis 
 
 The analytical findings are presented through an interactive **Streamlit dashboard**, enabling users to explore global trends as well as country-level insights.
 
+> *Does higher GDP per capita consistently translate into greater food availability — or does resilience depend on more than wealth alone?*
+
+---
+
+## Dashboard Preview
+
+<table>
+<tr>
+<td width="50%"><img src="assets/dashboard_preview.png" alt="Executive Overview"/></td>
+<td width="50%"><img src="assets/country_explorer.png" alt="Country Explorer"/></td>
+</tr>
+<tr>
+<td align="center"><sub>Executive Overview — global KPIs and world map</sub></td>
+<td align="center"><sub>Country Explorer — single-country deep dive vs. regional average</sub></td>
+</tr>
+</table>
+
+**[→ Explore the full live dashboard](https://beyond-economic-growth.streamlit.app/)**
+
 ---
 
 ## Project Objectives
 
-The project addresses the following objectives:
-
-- Evaluate the relationship between GDP and food availability.
-- Examine the influence of climate change on food security.
-- Assess the contribution of agricultural land and food production.
-- Analyse long-term food security trends.
-- Develop a composite Food System Resilience Index.
-- Build an interactive dashboard for exploratory analysis.
+- Evaluate the relationship between GDP and food availability
+- Examine the influence of climate change on food security
+- Assess the contribution of agricultural land and food production
+- Analyse long-term food security trends
+- Develop a composite Food System Resilience Index
+- Build an interactive dashboard for exploratory analysis
 
 ---
 
@@ -33,16 +64,13 @@ The project addresses the following objectives:
 
 | Source | Dataset |
 |---------|---------|
-| FAOSTAT | Food Balance Sheets |
-| FAOSTAT | Temperature Change on Land |
-| World Bank | GDP per Capita |
-| World Bank | Population |
-| World Bank | Agricultural Land (%) |
+| FAOSTAT | [Food Balance Sheets](https://www.fao.org/faostat/en/#data/FBS) |
+| FAOSTAT | [Temperature Change on Land](https://www.fao.org/faostat/en/#data/ET) |
+| World Bank | [GDP per Capita](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD) |
+| World Bank | [Population](https://data.worldbank.org/indicator/SP.POP.TOTL) |
+| World Bank | [Agricultural Land (%)](https://data.worldbank.org/indicator/AG.LND.AGRI.ZS) |
 
-**Coverage**
-
-- 178 Countries
-- 2010–2023
+**Coverage:** 177 countries · 2010–2023
 
 ---
 
@@ -50,12 +78,16 @@ The project addresses the following objectives:
 
 ```text
 beyond-economic-growth/
-
 ├── Home.py
 ├── config.py
 ├── utils.py
 ├── requirements.txt
+├── runtime.txt
 ├── README.md
+│
+├── assets/
+│   ├── dashboard_preview.png
+│   └── country_explorer.png
 │
 ├── pages/
 │
@@ -65,8 +97,8 @@ beyond-economic-growth/
 ├── notebooks/
 │   ├── 01_Data_Preparation.ipynb
 │   ├── 01_Data_Preparation.html
-│   ├── 02_Analytical_Questions_v4.ipynb
-│   └── 02_Analytical_Questions_v4.html
+│   ├── 02_Analytical_Questions.ipynb
+│   └── 02_Analytical_Questions.html
 │
 └── presentation/
     └── Beyond_Economic_Growth.pdf
@@ -78,10 +110,10 @@ beyond-economic-growth/
 
 The project investigates **twelve analytical questions** organised into four themes:
 
-- Economy & Prosperity
-- Climate & Resilience
-- Agriculture & Trade
-- Change & Composite Analysis
+- **Economy & Prosperity** — AQ1, AQ6, AQ9
+- **Climate & Resilience** — AQ2, AQ3, AQ4
+- **Agriculture & Trade** — AQ5, AQ7, AQ8
+- **Change & Composite Analysis** — AQ10, AQ11, AQ12
 
 ---
 
@@ -95,15 +127,15 @@ The Streamlit application provides:
 - Climate Impact
 - Agriculture & Production
 - Country Explorer
-- Resilience Rankings
+- Rankings
 
 ### Dashboard Features
 
-- Interactive sidebar filters
-- Country-level exploration
-- KPI cards
-- Plotly visualisations
-- Accessible colour palette
+- Interactive sidebar filters (Year, Region)
+- Country-level exploration with regional benchmarking
+- KPI cards with vs.-regional-average deltas
+- Plotly visualisations throughout
+- CVD-safe, accessible colour palette
 - Responsive layout
 
 ---
@@ -115,25 +147,23 @@ The Streamlit application provides:
 - Plotly
 - Pandas
 - NumPy
+- SciPy
 
 ---
 
 ## Installation
 
 Clone the repository:
-
 ```bash
 git clone https://github.com/Anupriya-Segar/beyond-economic-growth
 ```
 
 Install dependencies:
-
 ```bash
 pip install -r requirements.txt
 ```
 
 Run the dashboard:
-
 ```bash
 streamlit run Home.py
 ```
@@ -164,13 +194,5 @@ Potential extensions include:
 ## Author
 
 **Anupriya Segar**
-
-M.Sc. Data Science
-
-University of Europe for Applied Sciences
-
----
-
-## License
-
-This project was developed for academic purposes as part of the Data Visualization course.
+M.Sc. Data Science — University of Europe for Applied Sciences
+Developed for the Data Visualization course, Summer Semester 2026
